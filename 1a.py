@@ -1,11 +1,14 @@
-def longest(shas,shes):
-  if(shas in shes):
-    return shas
+luv=int(input())
+heart=[]
+for p in range(luv):
+  heart.append(input())
+mah=[]
+for p in zip(*heart):
+  if(p.count(p[0])==len(p)):
+     mah.append(p[0])
   else:
-    return longest(shas[0:len(shas)-1],shes)
-ch=int(input())
-che=[]
-for _ in range(0,ch):
-    che.append(input())
-che.sort()
-print(longest(che[0],che[ch-1]))
+    break
+print(''.join(mah))
+
+    
+  
